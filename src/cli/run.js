@@ -10,9 +10,6 @@ module.exports = function(argv) {
 		console.log = function() {};
 	}
 
-	// Set debug function.
-	console.debug = argv.debug ? console.log : function() {};
-
 	// Welcome screen.
 	console.log(chalk.yellow(art));
 

@@ -22,12 +22,6 @@ module.exports = function() {
 				requiresArg: true,
 				type: 'string',
 			},
-			debug: {
-				alias: ['d', 'dev', 'v', 'verbose'],
-				default: false,
-				description: 'Enable debug (verbose) logging',
-				type: 'bool',
-			},
 			quiet: {
 				alias: 'q',
 				default: false,
