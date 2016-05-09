@@ -2,6 +2,7 @@ var art = require('./art');
 var chalk = require('chalk');
 var ini = require('ini');
 var fs = require('fs');
+var server = require('../server');
 
 module.exports = function(argv) {
 	// Disable output if quiet was set.
@@ -13,7 +14,7 @@ module.exports = function(argv) {
 	console.debug = argv.debug ? console.log : function() {};
 
 	// Welcome screen.
-	console.log(art);
+	console.log(chalk.yellow(art));
 
 	// If asking for the version, quit here (art includes the version number).
 	if (argv.version) {
@@ -27,4 +28,14 @@ module.exports = function(argv) {
 		console.error(chalk.red('Failed to read configuration file.'));
 		throw err;
 	}
+
+	// Add the options passed via CLI.
+	config.debug = argv.debug;
+	config.host = argv.host;
+	config.port = argv.port;
+
+	// Start the server.
+	var app = server.create();
+	app.configure(config);
+	app.run();
 };

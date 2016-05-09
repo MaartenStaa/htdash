@@ -1,7 +1,7 @@
-var express = require('express');
+var app = require('./app');
 
 module.exports = {
 	create: function() {
-		return express();
+		return new app();
 	}
 };
