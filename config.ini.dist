@@ -1,0 +1,19 @@
+; Define which blocks to show on the dashboard, and in which order
+; Uncomment the lines applicable to you
+;blocks[] = sabnzbd
+;blocks[] = sickrage
+;blocks[] = sickbeard
+;blocks[] = couchpotato
+
+; Configuration section for each block
+[sabnzbd]
+apikey = 0123456789abcdef
+
+[sickrage]
+apikey = 0123456789abcdef
+
+[sickbeard]
+apikey = 0123456789abcdef
+
+[couchpotato]
+apikey = 0123456789abcdef
