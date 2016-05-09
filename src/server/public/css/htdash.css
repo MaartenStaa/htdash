@@ -1,0 +1,6 @@
+.block {
+	border: 1px solid #ccc;
+	border-radius: 0.5em;
+	box-shadow: black;
+	display: block;
+}
