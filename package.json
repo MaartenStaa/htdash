@@ -28,5 +28,12 @@
   "bugs": {
     "url": "https://github.com/MaartenStaa/htdash/issues"
   },
-  "homepage": "https://github.com/MaartenStaa/htdash"
+  "homepage": "https://github.com/MaartenStaa/htdash",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "express": "^4.13.4",
+    "ini": "^1.3.4",
+    "update-notifier": "^0.7.0",
+    "yargs": "^4.7.0"
+  }
 }
